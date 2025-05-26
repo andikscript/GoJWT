@@ -35,7 +35,7 @@ curl -H "Authorization: Bearer your.jwt.token.here" http://localhost:8123/index
 #### 3. Akses /noauth tanpa autentikasi
 
 ```bash
-curl http://localhost:8080/noauth
+curl http://localhost:8123/noauth
 ```
 
 ## 🧪 Teknologi yang Digunakan
