@@ -23,4 +23,4 @@
 ### 1. Login untuk mendapatkan Token
 
 ```bash
-curl -X POST http://localhost:8080/login -u your_username:your_password
+curl -X POST http://localhost:8123/login -u your_username:your_password
