@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "7e605583-bf76-425a-abd7-7d3abd1e3594",
+		"name": "Go JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39730987"
+	},
+	"item": [
+		{
+			"name": "Posting Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "andik",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8123/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8123",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8123/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8123",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 25 May 2025 03:07:34 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "232"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"success\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDgxNDI1MTQsImlzcyI6IkdvIEpXVCIsInVzZXJuYW1lIjoiYW5kaWsifQ.curAEkF8zXqSZSX-mmqONcdnJn4-yzLVmp4Qb7H1N-E\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Inquiry Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDgxNDY2NzksImlzcyI6IkdvIEpXVCIsInVzZXJuYW1lIjoiYW5kaWsifQ.mzBEcF7orA0YbbIsard8TBqwKb6bM5i2uyTi6Jeoxxg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDgxNDUyNDUsImlzcyI6IkdvIEpXVCIsInVzZXJuYW1lIjoiYW5kaWsifQ.8Fvu-zofo7wvH2Ze7zWAw9V9g98appZoUuIKGCVv4mE"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8123/index",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8123",
+					"path": [
+						"index"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDgxNDUyNDUsImlzcyI6IkdvIEpXVCIsInVzZXJuYW1lIjoiYW5kaWsifQ.8Fvu-zofo7wvH2Ze7zWAw9V9g98appZoUuIKGCVv4mE"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8123/index",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8123",
+							"path": [
+								"index"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 25 May 2025 03:08:16 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "76"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"this is index\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "No Auth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8123/noauth",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8123",
+					"path": [
+						"noauth"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8123/noauth",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8123",
+							"path": [
+								"noauth"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 25 May 2025 03:14:52 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"200\",\n    \"description\": \"OK\",\n    \"data\": {\n        \"message\": \"this is no auth\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
