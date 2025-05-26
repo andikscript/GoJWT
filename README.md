@@ -24,3 +24,27 @@
 
 ```bash
 curl -X POST http://localhost:8123/login -u your_username:your_password
+```
+
+### 2. Akses /index dengan Bearer Token
+
+```bash
+curl -H "Authorization: Bearer your.jwt.token.here" http://localhost:8123/index
+```
+
+### 3. Akses /noauth tanpa autentikasi
+
+```bash
+curl http://localhost:8080/noauth
+```
+
+## 🧪 Teknologi yang Digunakan
+- Golang
+- JWT
+- Standar library (tanpa framework eksternal)
+
+## 🚀 Cara Menjalankan
+
+```bash
+go run main.go
+```
