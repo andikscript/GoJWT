@@ -20,19 +20,19 @@
 
 ## 🔐 Contoh Penggunaan
 
-### 1. Login untuk mendapatkan Token
+#### 1. Login untuk mendapatkan Token
 
 ```bash
 curl -X POST http://localhost:8123/login -u your_username:your_password
 ```
 
-### 2. Akses /index dengan Bearer Token
+#### 2. Akses /index dengan Bearer Token
 
 ```bash
 curl -H "Authorization: Bearer your.jwt.token.here" http://localhost:8123/index
 ```
 
-### 3. Akses /noauth tanpa autentikasi
+#### 3. Akses /noauth tanpa autentikasi
 
 ```bash
 curl http://localhost:8080/noauth
